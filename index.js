@@ -5,6 +5,7 @@ const email = document.getElementById('email');
 
 
 
+
 form.addEventListener('submit', e => {
     e.preventDefault();
 
@@ -58,4 +59,42 @@ const validateInputs = () => {
     } else {
         setSuccess(email);
     }
-}
+
+
+        let popup = document.getElementById('popup');
+
+     if(name.value === '' || surname.value === '' || email.value === ''){
+popup.classList.remove("open-popup");
+     }
+     else if (!isValidEmail(emailValue)) {
+        setError(email, 'Provide a valid email address');}
+     else{
+        popup.classList.add("open-popup");
+     }
+
+    }
+ function closePopup(){
+       popup.classList.remove("open-popup");
+ }
+// const popUp = () => {
+//         let popup = document.getElementById('popup');
+
+//     function openPopup(){
+//      var name = document.getElementById('name');
+//      var surname = document.getElementById('surname');
+//     var email = document.getElementById('email');
+
+//      if(name.value === '' || surname.value === '' || email.value === ''){
+// popup.classList.remove("open-popup");
+//      }
+//      else if (!isValidEmail(emailValue)) {
+//         setError(email, 'Provide a valid email address');}
+//      else{
+//         popup.classList.add("open-popup");
+//      }
+
+//     }
+//      function closePopup(){
+//         popup.classList.remove("open-popup");
+//     }
+// }

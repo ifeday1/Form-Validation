@@ -1,16 +1,28 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5K6469H');</script>
-<!-- End Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5K6469H');
+    </script>
+    <!-- End Google Tag Manager -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,21 +31,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="./style.css">
     <script defer src="./index.js"></script>
 </head>
+
 <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K6469H"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K6469H" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div class="container">
         <form id="form" action="/">
             <h1>Registration</h1>
-          <div class="input-control">
+            <div class="input-control">
                 <label for="name">name</label>
                 <input id="name" name="name" type="text">
                 <div class="error"></div>
             </div>
-                     <div class="input-control">
+            <div class="input-control">
                 <label for="surname">surname</label>
                 <input id="surname" name="surname" type="text">
                 <div class="error"></div>
@@ -43,34 +56,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <input id="email" name="email" type="text">
                 <div class="error"></div>
             </div>
-          
-              <div >
+
+            <div>
                 <label>customer group</label><br>
                 <br>
-                <input type="radio" id="platin" name="group" value="Platin">
-                <label for="platin">platin</label>
-                <input type="radio" id="gold" name="group" value="Gold">
-                <label for="gold">gold</label><br>
-                <input type="radio" id="sliver" name="group" value="Sliver">
-                <label for="sliver">sliver</label>
-                <input type="radio" id="standard" name="group" value="Standard">
-                <label for="standard">standard</label>
+                  <input type="radio" id="platin" name="group" value="Platin">
+                  <label for="platin">platin</label>
+                  <input type="radio" id="gold" name="group" value="Gold">
+                  <label for="gold">gold</label><br>
+                  <input type="radio" id="sliver" name="group" value="Sliver">
+                  <label for="sliver">sliver</label>
+                  <input type="radio" id="standard" name="group" value="Standard">
+                  <label for="standard">standard</label>
                 <div class="error"></div>
             </div>
             <br>
             <button type="submit" onclick="openPopup()"> Sign Up</button>
 
-             <div class="popup" id="popup">
+            <div class="popup" id="popup">
                 <img src="404-tick.png">
                 <h2>Thank You!</h2>
                 <p>Your details have been successfully submitted.</p>
                 <button type="button" onclick="closePopup()">OK</button>
-             </div>
+            </div>
         </form>
     </div>
 
 
-<script>
+    <!-- <script>
     let popup = document.getElementById('popup');
 
     function openPopup(){
@@ -89,7 +102,8 @@ popup.classList.remove("open-popup");
      function closePopup(){
         popup.classList.remove("open-popup");
     }
-</script>
+</script> -->
 
 </body>
+
 </html>
